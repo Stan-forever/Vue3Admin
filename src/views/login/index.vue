@@ -6,6 +6,7 @@
             </div>
             <div class="login-box-right">
                 <loginForm></loginForm>
+                <el-input></el-input>
             </div>
         </div>
     </div>
