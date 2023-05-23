@@ -8,6 +8,7 @@
                 <loginForm></loginForm>
                 <el-input></el-input>
             </div>
+            <div>login test2</div>
         </div>
     </div>
 </template>
