@@ -6,12 +6,6 @@
         <el-button @click="testFn">test</el-button>
         <div>num:{{ realNum }}</div>
         <el-button @click="add">add</el-button>
-        <el-form>
-            <el-form-item>
-                <el-input></el-input>
-            </el-form-item>
-            <el-form-item> el-select </el-form-item>
-        </el-form>
         <!-- <FilterCard :filterForm="state.filterForm" :filterParams="filterParams"></FilterCard> -->
     </div>
 </template>
