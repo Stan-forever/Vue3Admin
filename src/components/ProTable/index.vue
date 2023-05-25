@@ -55,5 +55,6 @@ const handleSizeChange = () => {
 }
 const handleCurrentChange = () => {
     emit('handleCurrentChange', 1)
+    console.log('back')
 }
 </script>
