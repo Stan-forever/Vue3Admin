@@ -1,33 +1,33 @@
 {
-	"compilerOptions": {
-		"typeRoots": ["node_modules/@types", "src/types"],
-		"target": "ESNext",
-		"useDefineForClassFields": true,
-		"module": "ESNext",
-		"moduleResolution": "node",
-		"strict": true,
-		"jsx": "preserve",
-		"sourceMap": true,
-		"resolveJsonModule": true,
-		"esModuleInterop": true,
-		"lib": ["ESNext", "DOM"],
-		"skipLibCheck": true,
-		"baseUrl": "./",
-		"paths": {
-			"@": ["src"],
-			"@/*": ["src/*"]
-		}
-
-		/* Bundler mode */
-		// "allowImportingTsExtensions": true,
-		// "isolatedModules": true,
-		// "noEmit": true,
-
-		/* Linting */
-		// "noUnusedLocals": true,
-		// "noUnusedParameters": true,
-		// "noFallthroughCasesInSwitch": true
-	},
-	"include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"]
-	// "references": [{ "path": "./tsconfig.node.json" }]
+    "compilerOptions": {
+        "target": "esnext",
+        "module": "esnext",
+        "strict": true,
+        "jsx": "preserve",
+        "moduleResolution": "node",
+        "experimentalDecorators": true,
+        "skipLibCheck": true,
+        "esModuleInterop": true,
+        "allowSyntheticDefaultImports": true,
+        "forceConsistentCasingInFileNames": true,
+        "useDefineForClassFields": true,
+        "sourceMap": true,
+        "baseUrl": ".",
+        "noEmit": true,
+        "types": ["node", "webpack-env", "element-plus/global"],
+        "paths": {
+            "@/*": ["src/*"],
+            "@assets-theme/*": ["src/assets/*", "src/assets-theme-modaf/*"]
+        },
+        "lib": ["esnext", "dom", "dom.iterable", "scripthost"]
+    },
+    "include": [
+        "src/**/*.ts",
+        "src/**/*.tsx",
+        "src/**/*.vue",
+        "tests/**/*.ts",
+        "tests/**/*.tsx",
+        "components.d.ts"
+    ],
+    "exclude": ["node_modules", "dist", "**/*.js"]
 }

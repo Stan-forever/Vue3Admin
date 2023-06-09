@@ -12,7 +12,7 @@
 </template>
 
 <script setup lang="ts">
-import { computed, reactive, ref, watch } from 'vue'
+import { computed, reactive, ref, watch, onMounted } from 'vue'
 import { ElMessageBox, ElMessage } from 'element-plus'
 
 import { useRouter } from 'vue-router'
@@ -96,6 +96,13 @@ const realNum = computed({
     set: (val: any) => {
         console.log('val', val)
     }
+})
+onMounted(() => {
+    const list = [1, 2, 3]
+    console.log('list', list)
+    // const stringList = list.map((item) => item + '')
+    const stringList = list.map(String)
+    console.log('stringList', stringList)
 })
 </script>
 

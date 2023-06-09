@@ -80,3 +80,10 @@ console.log(Object.keys(object1));
 // Expected output: Array ["a", "b", "c"]
 ```
 ### 11、解析JSON(JSON.parse) 转为JSON串(JSON.stringfy)
+### 12、数字数组转为字符串数组
+```
+const list = [1, 2, 3]
+console.log('list', list) ///[1, 2, 3]
+const stringList = list.map(String)
+console.log('stringList', stringList) //['1', '2', '3']
+```

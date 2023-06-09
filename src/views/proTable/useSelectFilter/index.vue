@@ -9,7 +9,7 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted } from 'vue'
+import { onMounted, computed } from 'vue'
 onMounted(() => {
     // 配置内容
     const config = {
@@ -78,10 +78,12 @@ onMounted(() => {
     // 绘制
     const draw = (event) => {
         // 获取当前坐标点位
-        const { pageX, pageY } = mobileStatus ? event.changedTouches[0] : event
+        // const { pageX, pageY } = mobileStatus ? event.changedTouches[0] : event
+        // console.log(pageX, pageY)
+        const { pageX, pageY } = event
         // 修改最后一次绘制的坐标点
-        client.endX = pageX
-        client.endY = pageY
+        client.endX = pageX - 100
+        client.endY = pageY - 50
 
         // 根据坐标点位移动添加线条
         ctx.lineTo(pageX, pageY)
